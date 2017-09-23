@@ -4,7 +4,7 @@
 #
 Name     : perl-IO-stringy
 Version  : 2.111
-Release  : 1
+Release  : 2
 URL      : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Summary  : ~
@@ -69,14 +69,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.0/IO/AtomicFile.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/InnerFile.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/Lines.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/Scalar.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/ScalarArray.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/Stringy.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/Wrap.pm
-/usr/lib/perl5/site_perl/5.26.0/IO/WrapTie.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/AtomicFile.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/InnerFile.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/Lines.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/Scalar.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/ScalarArray.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/Stringy.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/Wrap.pm
+/usr/lib/perl5/site_perl/5.26.1/IO/WrapTie.pm
 
 %files doc
 %defattr(-,root,root,-)
