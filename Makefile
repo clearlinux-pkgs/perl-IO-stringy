@@ -1,5 +1,5 @@
 PKG_NAME := perl-IO-stringy
-URL := http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
-
+URL = http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common

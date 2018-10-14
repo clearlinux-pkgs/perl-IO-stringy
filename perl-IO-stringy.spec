@@ -4,13 +4,14 @@
 #
 Name     : perl-IO-stringy
 Version  : 2.111
-Release  : 4
+Release  : 5
 URL      : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Summary  : ~
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-IO-stringy-doc
+Requires: perl-IO-stringy-license = %{version}-%{release}
+BuildRequires : buildreq-cpan
 
 %description
 NAME
@@ -24,12 +25,21 @@ IO::
 ::Wrap         RdpO  Wrap old-style FHs in standard OO interface  ERYQ
 ::WrapTie      adpO  Tie your handles & retain full OO interface  ERYQ
 
-%package doc
-Summary: doc components for the perl-IO-stringy package.
-Group: Documentation
+%package dev
+Summary: dev components for the perl-IO-stringy package.
+Group: Development
+Provides: perl-IO-stringy-devel = %{version}-%{release}
 
-%description doc
-doc components for the perl-IO-stringy package.
+%description dev
+dev components for the perl-IO-stringy package.
+
+
+%package license
+Summary: license components for the perl-IO-stringy package.
+Group: Default
+
+%description license
+license components for the perl-IO-stringy package.
 
 
 %prep
@@ -42,7 +52,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
 ./Build
@@ -57,10 +67,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-IO-stringy
+cp COPYING %{buildroot}/usr/share/package-licenses/perl-IO-stringy/COPYING
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -69,15 +81,26 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/IO/AtomicFile.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/InnerFile.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/Lines.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/Scalar.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/ScalarArray.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/Stringy.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/Wrap.pm
-/usr/lib/perl5/site_perl/5.26.1/IO/WrapTie.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/AtomicFile.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/InnerFile.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/Lines.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/Scalar.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/ScalarArray.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/Stringy.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/Wrap.pm
+/usr/lib/perl5/vendor_perl/5.26.1/IO/WrapTie.pm
 
-%files doc
+%files dev
 %defattr(-,root,root,-)
-%doc /usr/share/man/man3/*
+/usr/share/man/man3/IO::AtomicFile.3
+/usr/share/man/man3/IO::InnerFile.3
+/usr/share/man/man3/IO::Lines.3
+/usr/share/man/man3/IO::Scalar.3
+/usr/share/man/man3/IO::ScalarArray.3
+/usr/share/man/man3/IO::Stringy.3
+/usr/share/man/man3/IO::Wrap.3
+/usr/share/man/man3/IO::WrapTie.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-IO-stringy/COPYING
