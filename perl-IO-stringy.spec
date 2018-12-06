@@ -81,14 +81,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.0/IO/AtomicFile.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/InnerFile.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/Lines.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/Scalar.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/ScalarArray.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/Stringy.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/Wrap.pm
-/usr/lib/perl5/vendor_perl/5.28.0/IO/WrapTie.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/AtomicFile.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/InnerFile.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/Lines.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/Scalar.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/ScalarArray.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/Stringy.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/Wrap.pm
+/usr/lib/perl5/vendor_perl/5.28.1IO/WrapTie.pm
 
 %files dev
 %defattr(-,root,root,-)
