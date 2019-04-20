@@ -4,10 +4,10 @@
 #
 Name     : perl-IO-stringy
 Version  : 2.111
-Release  : 11
+Release  : 12
 URL      : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
-Summary  : ~
+Summary  : I/O on in-core objects like strings/arrays
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-IO-stringy-license = %{version}-%{release}
@@ -29,6 +29,7 @@ IO::
 Summary: dev components for the perl-IO-stringy package.
 Group: Development
 Provides: perl-IO-stringy-devel = %{version}-%{release}
+Requires: perl-IO-stringy = %{version}-%{release}
 
 %description dev
 dev components for the perl-IO-stringy package.
