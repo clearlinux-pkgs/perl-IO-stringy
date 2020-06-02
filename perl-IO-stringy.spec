@@ -4,7 +4,7 @@
 #
 Name     : perl-IO-stringy
 Version  : 2.111
-Release  : 15
+Release  : 16
 URL      : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Summary  : ~
@@ -111,11 +111,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/IO/AtomicFile.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/InnerFile.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/Lines.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/Scalar.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/ScalarArray.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/Stringy.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/Wrap.pm
-/usr/lib/perl5/vendor_perl/5.30.2/IO/WrapTie.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/AtomicFile.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/InnerFile.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/Lines.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/Scalar.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/ScalarArray.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/Stringy.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/Wrap.pm
+/usr/lib/perl5/vendor_perl/5.30.3/IO/WrapTie.pm
