@@ -4,7 +4,7 @@
 #
 Name     : perl-IO-stringy
 Version  : 2.111
-Release  : 21
+Release  : 22
 URL      : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Summary  : ~
