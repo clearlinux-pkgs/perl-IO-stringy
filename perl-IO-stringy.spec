@@ -4,7 +4,7 @@
 #
 Name     : perl-IO-stringy
 Version  : 2.111
-Release  : 23
+Release  : 24
 URL      : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
 Summary  : ~
@@ -111,11 +111,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/IO/AtomicFile.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/InnerFile.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/Lines.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/Scalar.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/ScalarArray.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/Stringy.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/Wrap.pm
-/usr/lib/perl5/vendor_perl/5.34.0/IO/WrapTie.pm
+/usr/lib/perl5/*
